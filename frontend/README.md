@@ -1,54 +1,101 @@
-# React + TypeScript + Vite
+# Home Screen App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, responsive React application featuring a stylish home screen with goals tracking functionality.
 
-Currently, two official plugins are available:
+## Project Overview
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+This project is built with React 19, TypeScript, and Vite, providing a fast and efficient development experience. The application features a mobile-friendly home screen with a goals section.
 
-## Expanding the ESLint configuration
+## Features
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- Responsive design that works on both desktop and mobile devices
+- Clean, modern UI with a goals tracking section
+- Optimized for performance
+
+## Installation
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/yourusername/home-screen-app.git
+   cd home-screen-app
+   ```
+
+2. Install dependencies:
+
+   ```bash
+   npm install
+   ```
+
+3. Start the development server:
+
+   ```bash
+   npm run dev
+   ```
+
+4. Build for production:
+   ```bash
+   npm run build
+   ```
+
+## Project Structure
+
+```
+src/
+├── components/       # React components
+│   └── HomeScreen.tsx
+├── styles/           # CSS files
+│   └── HomeScreen.css
+├── docs/             # Documentation
+├── App.tsx           # Main application component
+├── App.css           # Main application styles
+├── main.tsx          # Application entry point
+└── index.css         # Global styles
+```
+
+## Components
+
+### HomeScreen
+
+The main component that displays a mobile-friendly home screen with:
+
+- Status bar
+- Goals section with two goal items
+- Home indicator
+
+See [Component Documentation](./docs/components/HomeScreen.md) for more details.
+
+## Mobile Responsiveness
+
+The application is fully responsive and optimized for mobile devices:
+
+- Adapts to different screen sizes
+- Maintains proper layout on small screens
+- Prevents horizontal scrolling
+- Adjusts font sizes and spacing for better mobile experience
+
+## Development
+
+### ESLint Configuration
+
+This project uses ESLint for code quality. If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
 
 ```js
 export default tseslint.config({
   extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
     ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
     ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
     ...tseslint.configs.stylisticTypeChecked,
   ],
   languageOptions: {
-    // other options...
     parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
+      project: ["./tsconfig.node.json", "./tsconfig.app.json"],
       tsconfigRootDir: import.meta.dirname,
     },
   },
-})
+});
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## License
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+MIT
