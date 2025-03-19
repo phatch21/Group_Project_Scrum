@@ -12,10 +12,14 @@ function CreateAccount() {
     setFormData({ ...formData, [e.target.id]: e.target.value });
   };
 
-  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    console.log("Form submitted:", formData);
-    // Now you can do something with the formData, like sending it to an API or processing it
+  // const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+  //   e.preventDefault();
+  //   console.log("Form submitted:", formData);
+  //   // Now you can do something with the formData, like sending it to an API or processing it
+  // };
+
+  const handleSubmit = () => {
+    console.log("test");
   };
 
   return (
