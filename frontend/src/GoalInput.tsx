@@ -4,7 +4,13 @@ const GoalInput = () => {
   const [category, setCategory] = useState("");
   const [goal, setGoal] = useState("");
   const [submitted, setSubmitted] = useState(false);
-  const predefinedCategories = ["Physical", "Spiritual", "Social", "Emotional"];
+  const predefinedCategories = [
+    "Physical",
+    "Spiritual",
+    "Social",
+    "Emotional",
+    "Other",
+  ];
 
   const handleCategorySelect = (
     selectedCategory: React.SetStateAction<string>
