@@ -4,6 +4,11 @@ import BottomNavigation from "./BottomNavigation";
 import Settings from "./Settings";
 import "./App.css";
 
+import HomeScreen from "./components/HomeScreen";
+import BottomNavigation from "./BottomNavigation";
+
+
+
 function App() {
   return (
     <BrowserRouter>
@@ -12,9 +17,16 @@ function App() {
         <Route path="/Settings" element={<Settings />} />
       </Routes>
 
+
       {/* Must be inside BrowserRouter to use useNavigate() */}
       <BottomNavigation />
     </BrowserRouter>
+
+    <div className="app-container">
+      <HomeScreen />
+      {/* Bottom Navigation */}
+      <BottomNavigation />
+    </div>
   );
 }
 
