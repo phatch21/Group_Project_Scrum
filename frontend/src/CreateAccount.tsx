@@ -18,7 +18,7 @@ function CreateAccount() {
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     try {
-      const response = await fetch("http://localhost:7182/api/users", {
+      const response = await fetch("http://localhost:7182/api/auth/register", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
