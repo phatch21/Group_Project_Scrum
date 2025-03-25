@@ -146,35 +146,6 @@ public partial class ApricotTreeDbContext : DbContext
             entity.Property(e => e.TypeId)
                 .ValueGeneratedNever()
                 .HasColumnName("TypeID");
-
-            // Add seeding data here
-            entity.HasData(
-                new GoalType
-                {
-                    TypeId = 1,
-                    TypeName = "Social"
-                },
-                new GoalType
-                {
-                    TypeId = 2,
-                    TypeName = "Spiritual"
-                },
-                new GoalType
-                {
-                    TypeId = 3,
-                    TypeName = "Physical"
-                },
-                new GoalType
-                {
-                    TypeId = 4,
-                    TypeName = "Emotional"
-                },
-                new GoalType
-                {
-                    TypeId = 5,
-                    TypeName = "Other"
-                }
-            );
         });
 
         modelBuilder.Entity<GraphUser>(entity =>
