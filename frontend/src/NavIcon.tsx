@@ -2,6 +2,8 @@ import React from "react";
 import styles from "./BottomNavigation.module.css";
 
 interface NavButtonProps {
+  iconName: string;
+  svgContent: string;
   id: string;
   icon: React.ReactNode;
   isActive: boolean;

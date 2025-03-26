@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "./styles/Settings.css";
 
 const GoalInput = () => {
   const [category, setCategory] = useState("");
@@ -41,14 +42,14 @@ const GoalInput = () => {
   };
 
   return (
-    <div className="p-4 max-w-md mx-auto">
+    <div className="settings-screen">
       {!category ? (
         <div>
           <h2 className="text-lg font-bold mb-4">Select a Goal Category</h2>
           {predefinedCategories.map((cat) => (
             <button
               key={cat}
-              className="m-2 p-2 border rounded"
+              className="settings-button logout"
               onClick={() => handleCategorySelect(cat)}
             >
               {cat}
