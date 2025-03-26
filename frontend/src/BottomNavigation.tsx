@@ -59,15 +59,19 @@ const BottomNavigation: React.FC = () => {
             iconName="target"
             svgContent={TARGET_ICON}
             isActive={activeIcon === "target"}
-            onClick={() => handleIconClick("target")}
+            onClick={() => navigate("/stats")}
             ariaLabel="Target"
+            id={""}
+            icon={undefined}
           />
           <NavIcon
             iconName="image"
             svgContent={IMAGE_ICON}
             isActive={activeIcon === "image"}
-            onClick={() => handleIconClick("image")}
+            onClick={() => navigate("/Customization")}
             ariaLabel="Image"
+            id={""}
+            icon={undefined}
           />
           <NavIcon
             iconName="home"
@@ -75,13 +79,17 @@ const BottomNavigation: React.FC = () => {
             isActive={activeIcon === "home"}
             onClick={() => navigate("/")}
             ariaLabel="Home"
+            id={""}
+            icon={undefined}
           />
           <NavIcon
             iconName="users"
             svgContent={USERS_ICON}
             isActive={activeIcon === "users"}
-            onClick={() => handleIconClick("users")}
+            onClick={() => navigate("/Orchard")}
             ariaLabel="Users"
+            id={""}
+            icon={undefined}
           />
           <NavIcon
             iconName="tool"
@@ -89,6 +97,8 @@ const BottomNavigation: React.FC = () => {
             isActive={activeIcon === "tool"}
             onClick={() => navigate("/Settings")}
             ariaLabel="Tool"
+            id={""}
+            icon={undefined}
           />
         </nav>
         <div className={styles.bottomBorder} />

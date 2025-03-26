@@ -1,8 +1,12 @@
 .home-screen {
-  margin: 0;
-  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  min-height: 100vh;
   overflow: hidden;
-  position: relative;
+  background-color: #f8f8f8; /* optional */
 }
 
 @media (max-width: 480px) {
@@ -299,5 +303,5 @@
   display: flex;
   flex-shrink: 0;
   height: 5px;
-  background-color: #000;
+  background-color: #000000;
 }
