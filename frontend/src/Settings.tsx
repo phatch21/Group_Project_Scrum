@@ -21,6 +21,7 @@ function Settings() {
         <br />
 
         <button type="submit">Save Settings</button>
+        <button type="submit">Log Out</button>
       </form>
     </>
   );

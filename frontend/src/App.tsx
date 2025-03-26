@@ -4,6 +4,7 @@ import BottomNavigation from "./BottomNavigation";
 import Settings from "./Settings";
 import "./App.css";
 import Customization from "./Customization";
+import Stats from "./Stats";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
           <Route path="/" element={<HomeScreen />} />
           <Route path="/settings" element={<Settings />} />
           <Route path="/customization" element={<Customization />} />
+          <Route path="/stats" element={<Stats />} />
         </Routes>
         {/* Bottom Navigation always shows */}
         <BottomNavigation />
