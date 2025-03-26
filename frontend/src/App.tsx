@@ -1,16 +1,22 @@
+<<<<<<< HEAD
 
 import { useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import HomeScreen from "./components/HomeScreen";
 import BottomNavigation from "./BottomNavigation";
 import Settings from "./Settings";
+=======
+>>>>>>> tessa
 import "./App.css";
+import BottomNavigation from "./BottomNavigation";
+import GoalInput from "./GoalInput";
 
 import HomeScreen from "./components/HomeScreen";
 import Orchard from "./Orchard";
 import BottomNavigation from "./BottomNavigation";
 
 function App() {
+<<<<<<< HEAD
 
   const [activeScreen, setActiveScreen] = useState<"home" | "orchard">("home");
 
@@ -30,6 +36,13 @@ function App() {
       {activeScreen === "home" ? <HomeScreen /> : <Orchard />}
       <BottomNavigation setActiveScreen={setActiveScreen} />
     </div>
+=======
+  return (
+    <>
+      <GoalInput />
+      <BottomNavigation/>
+    </>
+>>>>>>> tessa
   );
 }
 
