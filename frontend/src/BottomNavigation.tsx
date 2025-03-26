@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import styles from "./BottomNavigation.module.css";
 import NavIcon from "./NavIcon";
+import { useNavigate } from "react-router-dom";
 
 // SVG content for each navigation icon
 const TARGET_ICON = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -41,6 +42,8 @@ const TOOL_ICON = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" x
 </svg>`;
 
 const BottomNavigation: React.FC = () => {
+  // Navigation
+  const navigate = useNavigate();
   const [activeIcon, setActiveIcon] = useState<string>("target");
 
   const handleIconClick = (iconName: string) => {
@@ -56,36 +59,46 @@ const BottomNavigation: React.FC = () => {
             iconName="target"
             svgContent={TARGET_ICON}
             isActive={activeIcon === "target"}
-            onClick={() => handleIconClick("target")}
+            onClick={() => navigate("/stats")}
             ariaLabel="Target"
+            id={""}
+            icon={undefined}
           />
           <NavIcon
             iconName="image"
             svgContent={IMAGE_ICON}
             isActive={activeIcon === "image"}
-            onClick={() => handleIconClick("image")}
+            onClick={() => navigate("/Customization")}
             ariaLabel="Image"
+            id={""}
+            icon={undefined}
           />
           <NavIcon
             iconName="home"
             svgContent={HOME_ICON}
             isActive={activeIcon === "home"}
-            onClick={() => handleIconClick("home")}
+            onClick={() => navigate("/")}
             ariaLabel="Home"
+            id={""}
+            icon={undefined}
           />
           <NavIcon
             iconName="users"
             svgContent={USERS_ICON}
             isActive={activeIcon === "users"}
-            onClick={() => handleIconClick("users")}
+            onClick={() => navigate("/Orchard")}
             ariaLabel="Users"
+            id={""}
+            icon={undefined}
           />
           <NavIcon
             iconName="tool"
             svgContent={TOOL_ICON}
             isActive={activeIcon === "tool"}
-            onClick={() => handleIconClick("tool")}
+            onClick={() => navigate("/Settings")}
             ariaLabel="Tool"
+            id={""}
+            icon={undefined}
           />
         </nav>
         <div className={styles.bottomBorder} />

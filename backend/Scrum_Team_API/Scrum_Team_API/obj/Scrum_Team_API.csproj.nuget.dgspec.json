@@ -1,31 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\tessa\\source\\repos\\Group_Project_Scrum\\backend\\Scrum_Team_API\\Scrum_Team_API\\Scrum_Team_API.csproj": {}
+    "/Users/test/RiderProjects/Group_Project_Scrum/backend/Scrum_Team_API/Scrum_Team_API/Scrum_Team_API.csproj": {}
   },
   "projects": {
-    "C:\\Users\\tessa\\source\\repos\\Group_Project_Scrum\\backend\\Scrum_Team_API\\Scrum_Team_API\\Scrum_Team_API.csproj": {
+    "/Users/test/RiderProjects/Group_Project_Scrum/backend/Scrum_Team_API/Scrum_Team_API/Scrum_Team_API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\tessa\\source\\repos\\Group_Project_Scrum\\backend\\Scrum_Team_API\\Scrum_Team_API\\Scrum_Team_API.csproj",
+        "projectUniqueName": "/Users/test/RiderProjects/Group_Project_Scrum/backend/Scrum_Team_API/Scrum_Team_API/Scrum_Team_API.csproj",
         "projectName": "Scrum_Team_API",
-        "projectPath": "C:\\Users\\tessa\\source\\repos\\Group_Project_Scrum\\backend\\Scrum_Team_API\\Scrum_Team_API\\Scrum_Team_API.csproj",
-        "packagesPath": "C:\\Users\\tessa\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\tessa\\source\\repos\\Group_Project_Scrum\\backend\\Scrum_Team_API\\Scrum_Team_API\\obj\\",
+        "projectPath": "/Users/test/RiderProjects/Group_Project_Scrum/backend/Scrum_Team_API/Scrum_Team_API/Scrum_Team_API.csproj",
+        "packagesPath": "/Users/test/.nuget/packages/",
+        "outputPath": "/Users/test/RiderProjects/Group_Project_Scrum/backend/Scrum_Team_API/Scrum_Team_API/obj/",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\tessa\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/Users/test/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -43,8 +37,7 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "direct"
-        },
-        "SdkAnalysisLevel": "9.0.100"
+        }
       },
       "frameworks": {
         "net8.0": {
@@ -94,7 +87,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.101/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.405/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
