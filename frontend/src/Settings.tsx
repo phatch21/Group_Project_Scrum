@@ -1,29 +1,21 @@
+import { useNavigate } from "react-router-dom";
+import "./styles/Settings.css";
+
 function Settings() {
+  const navigate = useNavigate();
+
   return (
-    <>
-      <h1>Settings</h1>
+    <div className="settings-screen">
+      <h1 className="settings-title">Settings</h1>
 
-      <form>
-        <label htmlFor="notifications">Notifications:</label>
-        <br />
-        <select id="notifications" name="notifications">
-          <option value="enabled">Enabled</option>
-          <option value="disabled">Disabled</option>
-        </select>
-        <br />
-        <br />
-
-        <label>
-          <input type="checkbox" name="darkmode" />
-          Enable Dark Mode
-        </label>
-        <br />
-        <br />
-
-        <button type="submit">Save Settings</button>
-        <button type="submit">Log Out</button>
-      </form>
-    </>
+      <button
+        className="settings-button logout"
+        onClick={() => navigate("/Login")}
+        type="button"
+      >
+        Log Out
+      </button>
+    </div>
   );
 }
 
