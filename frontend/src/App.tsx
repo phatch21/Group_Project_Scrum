@@ -8,6 +8,7 @@ import Stats from "./stats";
 import Customization from "./Customization";
 import Login from "./Login";
 import CreateAccount from "./CreateAccount";
+import GoalInput from "./GoalInput";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <Route path="/Login" element={<Login />} />
         <Route path="/Orchard" element={<Orchard />} />
         <Route path="/CreateAccount" element={<CreateAccount />} />
+        <Route path="/GoalInput" element={<GoalInput />} />
       </Routes>
       {/* Only show nav bar on certain pages */}
       <BottomNavigation />
