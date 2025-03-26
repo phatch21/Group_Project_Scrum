@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Scrum_Team_API")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+86d35d161695a316994d385340e7979f05a4ca03")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+173934e0a67bc1ea5a4171c4269db0bd397126ce")]
 [assembly: System.Reflection.AssemblyProductAttribute("Scrum_Team_API")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Scrum_Team_API")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

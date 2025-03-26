@@ -7,7 +7,6 @@ function CreateAccount() {
     email: "",
     password: "",
   });
-
   const [error, setError] = useState<string | null>(null);
   const [success, setSuccess] = useState<string | null>(null);
 
@@ -17,6 +16,9 @@ function CreateAccount() {
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    setError(null);
+    setSuccess(null);
+
     try {
       const response = await fetch("http://localhost:7182/api/auth/register", {
         method: "POST",
@@ -25,19 +27,23 @@ function CreateAccount() {
           firstName: formData.firstName,
           lastName: formData.lastName,
           email: formData.email,
-          password: formData.password,
+          password: formData.password, // Backend should hash this
         }),
       });
+
       if (!response.ok) {
-        throw new Error("Failed to create account");
+        const errorData = await response.json();
+        throw new Error(errorData.message || "Failed to create account");
       }
-      const data = await response.json();
-      console.log("Account created successfully:", data);
+
+      setSuccess("Account created successfully! Please log in.");
+      console.log("Account created successfully.");
     } catch (err) {
-      setError("Error creating account. Please try again.");
+      setError((err as Error).message);
       console.error(err);
     }
   };
+
   return (
     <form onSubmit={handleSubmit}>
       <label htmlFor="firstName">First Name:</label>
@@ -53,7 +59,12 @@ function CreateAccount() {
       <br />
 
       <label htmlFor="email">Email:</label>
-      <input id="email" value={formData.email} onChange={handleChange} />
+      <input
+        id="email"
+        type="email"
+        value={formData.email}
+        onChange={handleChange}
+      />
       <br />
 
       <label htmlFor="password">Password:</label>
@@ -68,8 +79,9 @@ function CreateAccount() {
       {error && <p style={{ color: "red" }}>{error}</p>}
       {success && <p style={{ color: "green" }}>{success}</p>}
 
-      <button type="submit">Submit</button>
+      <button type="submit">Create Account</button>
     </form>
   );
 }
+
 export default CreateAccount;
