@@ -1,48 +1,32 @@
-<<<<<<< HEAD
-
 import { useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import HomeScreen from "./components/HomeScreen";
-import BottomNavigation from "./BottomNavigation";
+import HomeScreen from "./HomeScreen";
 import Settings from "./Settings";
-=======
->>>>>>> tessa
-import "./App.css";
-import BottomNavigation from "./BottomNavigation";
-import GoalInput from "./GoalInput";
 
-import HomeScreen from "./components/HomeScreen";
 import Orchard from "./Orchard";
 import BottomNavigation from "./BottomNavigation";
+import Stats from "./stats";
+import Customization from "./Customization";
+import Login from "./Login";
+import CreateAccount from "./CreateAccount";
+import GoalInput from "./GoalInput";
 
 function App() {
-<<<<<<< HEAD
-
-  const [activeScreen, setActiveScreen] = useState<"home" | "orchard">("home");
-
   return (
-    <BrowserRouter>
+    <div className="app-container">
       <Routes>
         <Route path="/" element={<HomeScreen />} />
-        <Route path="/Settings" element={<Settings />} />
+        <Route path="/settings" element={<Settings />} />
+        <Route path="/customization" element={<Customization />} />
+        <Route path="/stats" element={<Stats />} />
+        <Route path="/Login" element={<Login />} />
+        <Route path="/Orchard" element={<Orchard />} />
+        <Route path="/CreateAccount" element={<CreateAccount />} />
+        <Route path="/GoalInput" element={<GoalInput />} />
       </Routes>
-
-
-      {/* Must be inside BrowserRouter to use useNavigate() */}
+      {/* Only show nav bar on certain pages */}
       <BottomNavigation />
-    </BrowserRouter>
-
-    <div className="app-container">
-      {activeScreen === "home" ? <HomeScreen /> : <Orchard />}
-      <BottomNavigation setActiveScreen={setActiveScreen} />
     </div>
-=======
-  return (
-    <>
-      <GoalInput />
-      <BottomNavigation/>
-    </>
->>>>>>> tessa
   );
 }
 
