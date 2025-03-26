@@ -1,4 +1,4 @@
-import "../styles/HomeScreen.css";
+import "/Users/test/RiderProjects/Group_Project_Scrum/frontend/src/styles/HomeScreen.css";
 import { useEffect, useState } from "react";
 
 // Uncomment when the `Goal` type is available
@@ -13,7 +13,7 @@ function HomeScreen() {
   const [goals, setGoals] = useState([
     { GName: "Read More Books" },
     { GName: "Exercise Daily" },
-    { GName: "Learn React" }
+    { GName: "Learn React" },
   ]);
 
   return (
@@ -83,7 +83,6 @@ function HomeScreen() {
                 </div>
               ))}
             </div>
-
           </div>
         </div>
         {/* Spacer Element */}
@@ -96,7 +95,7 @@ function HomeScreen() {
             </div>
           </div>
         </div>
-      </div> 
+      </div>
     </>
   );
 }

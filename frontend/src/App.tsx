@@ -1,43 +1,33 @@
-
+import "./App.css";
 import { useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import HomeScreen from "./components/HomeScreen";
-import BottomNavigation from "./BottomNavigation";
+import HomeScreen from "./HomeScreen";
 import Settings from "./Settings";
-import CreateAccount from "./CreateAccount";
-import "./App.css";
 
-<<<<<<< HEAD
-=======
-import HomeScreen from "./components/HomeScreen";
 import Orchard from "./Orchard";
 import BottomNavigation from "./BottomNavigation";
+import Stats from "./stats";
+import Customization from "./Customization";
+import Login from "./Login";
+import CreateAccount from "./CreateAccount";
+import GoalInput from "./GoalInput";
 
->>>>>>> bb7b6e7918215b2240aeefc945b17078b47a73ea
 function App() {
-
-  const [activeScreen, setActiveScreen] = useState<"home" | "orchard">("home");
-
   return (
-    <BrowserRouter>
-      <div className="app-container">
-        <Routes>
-          <Route path="/" element={<HomeScreen />} />
-          <Route path="/Settings" element={<Settings />} />
-        </Routes>
-
-        {/* Must be inside BrowserRouter to use useNavigate() */}
-        <BottomNavigation />
-      </div>
-    </BrowserRouter>
-<<<<<<< HEAD
-=======
-
     <div className="app-container">
-      {activeScreen === "home" ? <HomeScreen /> : <Orchard />}
-      <BottomNavigation setActiveScreen={setActiveScreen} />
+      <Routes>
+        <Route path="/" element={<HomeScreen />} />
+        <Route path="/settings" element={<Settings />} />
+        <Route path="/customization" element={<Customization />} />
+        <Route path="/stats" element={<Stats />} />
+        <Route path="/Login" element={<Login />} />
+        <Route path="/Orchard" element={<Orchard />} />
+        <Route path="/CreateAccount" element={<CreateAccount />} />
+        <Route path="/GoalInput" element={<GoalInput />} />
+      </Routes>
+      {/* Only show nav bar on certain pages */}
+      <BottomNavigation />
     </div>
->>>>>>> bb7b6e7918215b2240aeefc945b17078b47a73ea
   );
 }
 

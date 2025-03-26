@@ -1,0 +1,52 @@
+.settings-screen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  min-height: 100vh;
+  overflow: hidden;
+  background-color: #f8f8f8;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+@media (max-width: 480px) {
+  .settings-screen {
+    max-width: 100%;
+  }
+}
+
+.settings-title {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 32px;
+  color: #333;
+  text-align: center;
+}
+
+.settings-button {
+  width: 100%;
+  max-width: 280px;
+  background-color: #e4f5f9;
+  color: #000;
+  font-size: 16px;
+  padding: 12px 16px;
+  margin-bottom: 16px;
+  border: none;
+  border-radius: 10px;
+  font-weight: 500;
+  transition: background-color 0.2s ease;
+}
+
+.settings-button:hover {
+  background-color: #d3e9ef;
+}
+
+.settings-button.logout {
+  background-color: #fce2e2;
+}
+
+.settings-button.logout:hover {
+  background-color: #f1c4c4;
+}
