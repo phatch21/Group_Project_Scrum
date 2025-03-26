@@ -3,29 +3,20 @@ import HomeScreen from "./components/HomeScreen";
 import BottomNavigation from "./BottomNavigation";
 import Settings from "./Settings";
 import "./App.css";
-
-import HomeScreen from "./components/HomeScreen";
-import BottomNavigation from "./BottomNavigation";
-
-
+import Customization from "./Customization";
 
 function App() {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<HomeScreen />} />
-        <Route path="/Settings" element={<Settings />} />
-      </Routes>
-
-
-      {/* Must be inside BrowserRouter to use useNavigate() */}
-      <BottomNavigation />
-    </BrowserRouter>
-
     <div className="app-container">
-      <HomeScreen />
-      {/* Bottom Navigation */}
-      <BottomNavigation />
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<HomeScreen />} />
+          <Route path="/settings" element={<Settings />} />
+          <Route path="/customization" element={<Customization />} />
+        </Routes>
+        {/* Bottom Navigation always shows */}
+        <BottomNavigation />
+      </BrowserRouter>
     </div>
   );
 }

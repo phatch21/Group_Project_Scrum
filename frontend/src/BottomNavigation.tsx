@@ -66,7 +66,7 @@ const BottomNavigation: React.FC = () => {
             iconName="image"
             svgContent={IMAGE_ICON}
             isActive={activeIcon === "image"}
-            onClick={() => handleIconClick("image")}
+            onClick={() => navigate("/Customization")}
             ariaLabel="Image"
           />
           <NavIcon
