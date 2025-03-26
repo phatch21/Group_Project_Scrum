@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using Microsoft.EntityFrameworkCore;
 
 namespace Scrum_Team_API.Models;
 
@@ -13,3 +14,5 @@ public partial class GoalType
 
     public virtual ICollection<Goal> Goals { get; set; } = new List<Goal>();
 }
+
+    

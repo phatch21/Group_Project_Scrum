@@ -1,0 +1,310 @@
+@import './colors.css';
+@import './footer.css';
+@import './buttons.css';
+
+/* Global styles */
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+body {
+  margin: 0;
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+/* Page layout for "Create a New Goal" */
+.goal-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+.goal-page h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.goal-illustration img {
+  max-width: 80%;
+  height: auto;
+  margin-bottom: 1.5rem;
+}
+
+.step-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.step-description {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+/* Goal input field */
+.goal-input {
+  width: 80%;
+  padding: 0.75rem 1rem;
+  border-radius: 10px;
+  border: 2px solid var(--physical-color);
+  margin-bottom: 1.5rem;
+  font-size: 1rem;
+}
+
+/* Navigation arrows (left/right buttons) */
+.navigation-arrows {
+  display: flex;
+  justify-content: space-between;
+  width: 60%;
+  margin-top: 1rem;
+}
+
+.navigation-arrows button {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+/* ===================================================== */
+/* =============== STATS PAGE ========================== */
+/* ===================================================== */
+
+.stats-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+.stats-page h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+}
+
+.stats-card {
+  width: 90%;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.stats-card-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.stats-card-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+/* Icon background colors */
+.stats-card-icon.yellow {
+  background-color: var(--accent-yellow); /* Yellow background */
+}
+
+.stats-card-icon.orange {
+  background-color: var(--spiritual-color); /* Orange background */
+}
+
+.stats-card-icon.pink {
+  background-color: var(--intellectual-color); /* Pink background */
+}
+
+/* ===================================================== */
+/* =============== ORCHARD PAGE ======================== */
+/* ===================================================== */
+
+.orchard-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+.orchard-page h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+
+.orchard-graphic img {
+  max-width: 80%;
+  height: auto;
+  margin-bottom: 2rem;
+}
+
+.orchard-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 80%;
+}
+
+.orchard-buttons button {
+  padding: 0.75rem 1.5rem;
+  border-radius: 25px;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+  background-color: var(--physical-color); /* Default blue button */
+  color: #ffffff;
+}
+
+.orchard-buttons button:hover {
+  opacity: 0.9;
+}
+
+/* ===================================================== */
+/* =============== LOGIN PAGE ========================== */
+/* ===================================================== */
+
+.login-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 4rem 1rem;
+}
+
+.login-page h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 80%;
+}
+
+.login-form input {
+  padding: 0.75rem 1rem;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+.login-form button {
+  padding: 0.75rem 1.5rem;
+  border-radius: 25px;
+  border: none;
+  cursor: pointer;
+  background-color: var(--emotional-color); /* Light blue button */
+  color: #333333;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.login-form button:hover {
+  opacity: 0.9;
+}
+
+.login-links {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+}
+
+.login-links a {
+  color: var(--physical-color);
+  text-decoration: none;
+}
+
+.login-links a:hover {
+  text-decoration: underline;
+}
+
+
+
+/* DEFAULT CSS */
+
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
