@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import styles from "./BottomNavigation.module.css";
 import NavIcon from "./NavIcon";
+import { useNavigate } from "react-router-dom";
 
 // SVG content for each navigation icon
 const TARGET_ICON = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -41,6 +42,8 @@ const TOOL_ICON = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" x
 </svg>`;
 
 const BottomNavigation: React.FC = () => {
+  // Navigation
+  const navigate = useNavigate();
   const [activeIcon, setActiveIcon] = useState<string>("target");
 
   const handleIconClick = (iconName: string) => {
@@ -70,7 +73,7 @@ const BottomNavigation: React.FC = () => {
             iconName="home"
             svgContent={HOME_ICON}
             isActive={activeIcon === "home"}
-            onClick={() => handleIconClick("home")}
+            onClick={() => navigate("/")}
             ariaLabel="Home"
           />
           <NavIcon
@@ -84,7 +87,7 @@ const BottomNavigation: React.FC = () => {
             iconName="tool"
             svgContent={TOOL_ICON}
             isActive={activeIcon === "tool"}
-            onClick={() => handleIconClick("tool")}
+            onClick={() => navigate("/Settings")}
             ariaLabel="Tool"
           />
         </nav>
