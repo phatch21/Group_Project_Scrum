@@ -313,10 +313,10 @@ C:\Users\tessa\source\repos\Group_Project_Scrum\backend\Scrum_Team_API\Scrum_Tea
 C:\Users\tessa\source\repos\Group_Project_Scrum\backend\Scrum_Team_API\Scrum_Team_API\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.Scrum_Team_API.props
 C:\Users\tessa\source\repos\Group_Project_Scrum\backend\Scrum_Team_API\Scrum_Team_API\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.Scrum_Team_API.props
 C:\Users\tessa\source\repos\Group_Project_Scrum\backend\Scrum_Team_API\Scrum_Team_API\obj\Debug\net8.0\staticwebassets.pack.json
-C:\Users\tessa\source\repos\Group_Project_Scrum\backend\Scrum_Team_API\Scrum_Team_API\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
 C:\Users\tessa\source\repos\Group_Project_Scrum\backend\Scrum_Team_API\Scrum_Team_API\obj\Debug\net8.0\Scrum_Te.7DF69D8C.Up2Date
 C:\Users\tessa\source\repos\Group_Project_Scrum\backend\Scrum_Team_API\Scrum_Team_API\obj\Debug\net8.0\Scrum_Team_API.dll
 C:\Users\tessa\source\repos\Group_Project_Scrum\backend\Scrum_Team_API\Scrum_Team_API\obj\Debug\net8.0\refint\Scrum_Team_API.dll
 C:\Users\tessa\source\repos\Group_Project_Scrum\backend\Scrum_Team_API\Scrum_Team_API\obj\Debug\net8.0\Scrum_Team_API.pdb
 C:\Users\tessa\source\repos\Group_Project_Scrum\backend\Scrum_Team_API\Scrum_Team_API\obj\Debug\net8.0\Scrum_Team_API.genruntimeconfig.cache
 C:\Users\tessa\source\repos\Group_Project_Scrum\backend\Scrum_Team_API\Scrum_Team_API\obj\Debug\net8.0\ref\Scrum_Team_API.dll
+C:\Users\tessa\source\repos\Group_Project_Scrum\backend\Scrum_Team_API\Scrum_Team_API\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt

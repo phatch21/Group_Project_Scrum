@@ -105,7 +105,7 @@ public partial class ApricotTreeDbContext : DbContext
             entity.ToTable("GOALS");
 
             entity.Property(e => e.GoalId)
-                .ValueGeneratedNever()
+                .ValueGeneratedOnAdd()
                 .HasColumnName("GoalID");
             entity.Property(e => e.FinDate)
                 .HasColumnType("DATETIME")
