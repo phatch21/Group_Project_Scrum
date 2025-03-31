@@ -8,7 +8,7 @@ import BottomNavigation from "./BottomNavigation";
 import Stats from "./stats";
 import Customization from "./Customization";
 import Login from "./Login";
-import CreateAccount from "./CreateAccount";
+import CreateAccount from "../src/pages/CreateAccount";
 import GoalInput from "./GoalInput";
 
 function App() {

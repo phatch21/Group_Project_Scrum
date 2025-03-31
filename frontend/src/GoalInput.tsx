@@ -1,21 +1,30 @@
-import React, { useState } from "react";
-import "./styles/Settings.css";
+import { useState, useEffect } from "react";
 
 const GoalInput = () => {
   const [category, setCategory] = useState("");
   const [goal, setGoal] = useState("");
   const [submitted, setSubmitted] = useState(false);
-  const predefinedCategories = [
-    "Physical",
-    "Spiritual",
-    "Social",
-    "Emotional",
-    "Other",
-  ];
+  const [categories, setCategories] = useState<string[]>([]);
+  const [error, setError] = useState("");
 
-  const handleCategorySelect = (
-    selectedCategory: React.SetStateAction<string>
-  ) => {
+  useEffect(() => {
+    const fetchCategories = async () => {
+      try {
+        const response = await fetch("https://localhost:7182/goaltypes");
+        if (!response.ok) throw new Error("Failed to load categories");
+
+        const data = await response.json();
+        setCategories(data.map((item: { typeName: string }) => item.typeName));
+      } catch (err) {
+        setError("Error loading categories");
+        console.error("Error fetching categories:", err);
+      }
+    };
+
+    fetchCategories();
+  }, []);
+
+  const handleCategorySelect = (selectedCategory: string) => {
     setCategory(selectedCategory);
     setGoal("");
     setSubmitted(false);
@@ -25,7 +34,7 @@ const GoalInput = () => {
     if (!goal || !category) return;
 
     try {
-      const response = await fetch("https://your-api-endpoint.com/goals", {
+      const response = await fetch("https://localhost:7182/goals", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ category, goal }),
@@ -42,19 +51,25 @@ const GoalInput = () => {
   };
 
   return (
-    <div className="settings-screen">
-      {!category ? (
+    <div className="p-4 max-w-md mx-auto">
+      {error ? (
+        <p className="text-red-500">{error}</p>
+      ) : !category ? (
         <div>
           <h2 className="text-lg font-bold mb-4">Select a Goal Category</h2>
-          {predefinedCategories.map((cat) => (
-            <button
-              key={cat}
-              className="settings-button logout"
-              onClick={() => handleCategorySelect(cat)}
-            >
-              {cat}
-            </button>
-          ))}
+          {categories.length > 0 ? (
+            categories.map((cat) => (
+              <button
+                key={cat}
+                className="m-2 p-2 border rounded"
+                onClick={() => handleCategorySelect(cat)}
+              >
+                {cat}
+              </button>
+            ))
+          ) : (
+            <p>Loading categories...</p>
+          )}
         </div>
       ) : (
         <div>
