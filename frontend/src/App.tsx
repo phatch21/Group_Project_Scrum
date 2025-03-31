@@ -1,4 +1,3 @@
-import { Routes, Route } from "react-router-dom";
 import HomePage from "./pages/HomePage";
 import LoginPage from "./pages/LoginPage";
 import SettingsPage from "./pages/SettingsPage";
@@ -7,6 +6,17 @@ import CustomizationsPage from "./pages/CustomizationsPage";
 import StatsPage from "./pages/StatsPage";
 import GoalsInputPage from "./pages/GoalsInputPage";
 import CreateAccountPage from "./pages/CreateAccountPage";
+import { useState } from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import HomeScreen from "./HomeScreen";
+import Settings from "./Settings";
+import Orchard from "./Orchard";
+import BottomNavigation from "./BottomNavigation";
+import Stats from "./stats";
+import Customization from "./Customization";
+import Login from "./Login";
+import CreateAccount from "../src/pages/CreateAccount";
+import GoalInput from "./GoalInput";
 
 function App() {
   return (

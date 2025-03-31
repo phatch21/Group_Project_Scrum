@@ -1,4 +1,4 @@
-import "/Users/test/RiderProjects/Group_Project_Scrum/frontend/src/styles/HomeScreen.css";
+import "../src/styles/HomeScreen.css";
 import { useEffect, useState } from "react";
 
 // Uncomment when the `Goal` type is available
