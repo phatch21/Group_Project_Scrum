@@ -1,11 +1,12 @@
 {
   "Version": 1,
-  "Hash": "+xl11n0ChD45dklaZttFopSUdAZXLGajyGE7FQHpGds=",
+  "Hash": "FVCAh+i5/m1ScEg2Drmpa2yPHxq/5HBlF0IhNzW6GzQ=",
   "Source": "Scrum_Team_API",
   "BasePath": "_content/Scrum_Team_API",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
   "DiscoveryPatterns": [],
-  "Assets": []
+  "Assets": [],
+  "Endpoints": []
 }
