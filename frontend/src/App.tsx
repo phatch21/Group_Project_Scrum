@@ -1,8 +1,15 @@
+import HomePage from "./pages/HomePage";
+import LoginPage from "./pages/LoginPage";
+import SettingsPage from "./pages/SettingsPage";
+import OrchardPage from "./pages/OrchardPage";
+import CustomizationsPage from "./pages/CustomizationsPage";
+import StatsPage from "./pages/StatsPage";
+import GoalsInputPage from "./pages/GoalsInputPage";
+import CreateAccountPage from "./pages/CreateAccountPage";
 import { useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import HomeScreen from "./HomeScreen";
 import Settings from "./Settings";
-
 import Orchard from "./Orchard";
 import BottomNavigation from "./BottomNavigation";
 import Stats from "./stats";
@@ -15,17 +22,15 @@ function App() {
   return (
     <div className="app-container">
       <Routes>
-        <Route path="/" element={<HomeScreen />} />
-        <Route path="/settings" element={<Settings />} />
-        <Route path="/customization" element={<Customization />} />
-        <Route path="/stats" element={<Stats />} />
-        <Route path="/Login" element={<Login />} />
-        <Route path="/Orchard" element={<Orchard />} />
-        <Route path="/CreateAccount" element={<CreateAccount />} />
-        <Route path="/GoalInput" element={<GoalInput />} />
+        <Route path="/" element={<HomePage />} />
+        <Route path="/settings" element={<SettingsPage />} />
+        <Route path="/customization" element={<CustomizationsPage />} />
+        <Route path="/stats" element={<StatsPage />} />
+        <Route path="/Login" element={<LoginPage />} />
+        <Route path="/Orchard" element={<OrchardPage />} />
+        <Route path="/CreateAccount" element={<CreateAccountPage />} />
+        <Route path="/GoalInput" element={<GoalsInputPage />} />
       </Routes>
-      {/* Only show nav bar on certain pages */}
-      <BottomNavigation />
     </div>
   );
 }
