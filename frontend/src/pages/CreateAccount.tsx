@@ -1,5 +1,4 @@
 import { useState } from "react";
-
 function CreateAccount() {
   const [formData, setFormData] = useState({
     firstName: "",
@@ -7,21 +6,28 @@ function CreateAccount() {
     email: "",
     password: "",
   });
-
+  const [error, setError] = useState<string | null>(null);
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setFormData({ ...formData, [e.target.id]: e.target.value });
   };
-
-  // const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
-  //   e.preventDefault();
-  //   console.log("Form submitted:", formData);
-  //   // Now you can do something with the formData, like sending it to an API or processing it
-  // };
-
-  const handleSubmit = () => {
-    console.log("test");
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    try {
+      const response = await fetch("http://localhost:7182/api/users", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+      if (!response.ok) {
+        throw new Error("Failed to create account");
+      }
+      const data = await response.json();
+      console.log("Account created successfully:", data);
+    } catch (err) {
+      setError("Error creating account. Please try again.");
+      console.error(err);
+    }
   };
-
   return (
     <form onSubmit={handleSubmit}>
       <label htmlFor="firstName">First Name:</label>
@@ -31,15 +37,12 @@ function CreateAccount() {
         onChange={handleChange}
       />
       <br />
-
       <label htmlFor="lastName">Last Name:</label>
       <input id="lastName" value={formData.lastName} onChange={handleChange} />
       <br />
-
       <label htmlFor="email">Email:</label>
       <input id="email" value={formData.email} onChange={handleChange} />
       <br />
-
       <label htmlFor="password">Password:</label>
       <input
         type="password"
@@ -48,10 +51,9 @@ function CreateAccount() {
         onChange={handleChange}
       />
       <br />
-
+      {error && <p style={{ color: "red" }}>{error}</p>}
       <button type="submit">Submit</button>
     </form>
   );
 }
-
 export default CreateAccount;
