@@ -1,21 +1,19 @@
-import React from "react";
-import { useNavigate } from "react-router-dom";
 import "./GoalsMenu.css";
+import { useNavigate } from "react-router-dom";
 
-const GoalsMenu: React.FC = () => {
+function Stats() {
   const navigate = useNavigate();
-
   return (
     <div className="container">
       <div className="menu-item">Current Goals</div>
       <hr />
-      <div onClick={() => navigate("/GoalInput")} className="menu-item">
+      <div className="menu-item" onClick={() => navigate("/GoalInput")}>
         New Goal
       </div>
       <hr />
       <div className="menu-item">Stats</div>
     </div>
   );
-};
+}
 
-export default GoalsMenu;
+export default Stats;
