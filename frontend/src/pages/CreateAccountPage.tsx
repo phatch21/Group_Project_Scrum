@@ -1,11 +1,11 @@
-import CreateAccount from "../CreateAccount";
+// // import CreateAccount from "../CreateAccount";
 
-function CreateAccountPage() {
-  return (
-    <>
-      <CreateAccount />
-    </>
-  );
-}
+// function CreateAccountPage() {
+//   return (
+//     <>
+//       <CreateAccount />
+//     </>
+//   );
+// }
 
-export default CreateAccountPage;
+// export default CreateAccountPage;
