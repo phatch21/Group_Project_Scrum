@@ -55,14 +55,14 @@ const GoalInput = () => {
     console.log("Formatted Date:", formattedDate);
 
     const payload = {
-      UserId: 1, // Remove this if the backend auto-generates it
-      gname: name,
-      Gdescription: description,
-      TypeId: parseInt(category), // Changed from TypeId to Type
-      FinDate: formattedDate,
-      SuggestId: null,
-      Freq: parseInt(frequency), // Changed from FreqId to Freq
-      GoalComp: false,
+      userId: 1,
+      gName: name, // Correct field name
+      gDescription: description, // Correct field name
+      typeId: parseInt(category), // Ensure category is an integer
+      finDate: formattedDate, // Ensure correct date format
+      suggestId: null, // This is optional based on your schema
+      freqId: parseInt(frequency), // Ensure frequency matches FreqID
+      goalComp: false, // Assuming this column exists
     };
 
     console.log("Submitting payload:", payload);
@@ -88,93 +88,92 @@ const GoalInput = () => {
 
   return (
     <div className="p-4 max-w-md mx-auto flex flex-col items-center text-center">
-    <div className="p-4 max-w-md mx-auto">
-      {error ? (
-        <p className="text-red-500">{error}</p>
-      ) : !category ? (
-        <div>
-          <h2 className="text-lg font-bold mb-4">Select a Goal Category</h2>
-          {categories.length > 0 ? (
-            categories.map((cat) => (
-              <button
-                key={cat.typeId}
-                className="my-button"
-                onClick={() => handleCategorySelect(cat.typeName)}
-              >
-                {cat.typeName}
-              </button>
-            ))
-          ) : (
-            <p>Loading categories...</p>
-          )}
-        </div>
-      ) : (
-        <div>
-          <h2 className="text-lg font-bold mb-4">
-            {
-              categories.find((cat) => cat.typeId.toString() === category)
-                ?.typeName
-            }{" "}
-            Goal
-          </h2>
-          {!submitted ? (
-            <div>
-              <input
-                type="text"
-                placeholder="Goal Name"
-                value={name}
-                onChange={(e) => setName(e.target.value)}
-                className="mb-2 p-2 border rounded w-full text-black"
-              />
-        
-              <textarea
-                placeholder="Description"
-                value={description}
-                onChange={(e) => setDescription(e.target.value)}
-                className="mb-2 p-2 border rounded w-full text-black"
-              />
-          
+      <div className="p-4 max-w-md mx-auto">
+        {error ? (
+          <p className="text-red-500">{error}</p>
+        ) : !category ? (
+          <div>
+            <h2 className="text-lg font-bold mb-4">Select a Goal Category</h2>
+            {categories.length > 0 ? (
+              categories.map((cat) => (
+                <button
+                  key={cat.typeId}
+                  className="my-button"
+                  onClick={() => handleCategorySelect(cat.typeName)}
+                >
+                  {cat.typeName}
+                </button>
+              ))
+            ) : (
+              <p>Loading categories...</p>
+            )}
+          </div>
+        ) : (
+          <div>
+            <h2 className="text-lg font-bold mb-4">
+              {
+                categories.find((cat) => cat.typeId.toString() === category)
+                  ?.typeName
+              }{" "}
+              Goal
+            </h2>
+            {!submitted ? (
+              <div>
+                <input
+                  type="text"
+                  placeholder="Goal Name"
+                  value={name}
+                  onChange={(e) => setName(e.target.value)}
+                  className="mb-2 p-2 border rounded w-full text-black"
+                />
 
-              <input
-                type="date"
-                value={finishDate}
-                onChange={(e) => setFinishDate(e.target.value)}
-                className="mb-2 p-2 border rounded w-full text-black"
-              />
-           
-              <select
-                value={frequency}
-                onChange={(e) => setFrequency(e.target.value)}
-                className="mb-2 p-2 border rounded w-full text-black"
-              >
-                <option value="">Select Frequency</option>
-                <option value="1">Daily</option>
-                <option value="2">Weekly</option>
-                <option value="3">Monthly</option>
-              </select>
-         
-              <button className="my-button" onClick={handleSubmit}>
-                Submit Goal
-              </button>
-            </div>
-          ) : (
-            <p className="text-green-600">Goal submitted successfully!</p>
-          )}
-        </div>
-      )}
+                <textarea
+                  placeholder="Description"
+                  value={description}
+                  onChange={(e) => setDescription(e.target.value)}
+                  className="mb-2 p-2 border rounded w-full text-black"
+                />
 
-      {/* Always show the Back button to go back to category selection */}
-      <button onClick={() => navigate(-1)} className="my-button">
-        Back
-      </button>
+                <input
+                  type="date"
+                  value={finishDate}
+                  onChange={(e) => setFinishDate(e.target.value)}
+                  className="mb-2 p-2 border rounded w-full text-black"
+                />
 
-      {/* Optionally, after submission, show this */}
-      {submitted && (
+                <select
+                  value={frequency}
+                  onChange={(e) => setFrequency(e.target.value)}
+                  className="mb-2 p-2 border rounded w-full text-black"
+                >
+                  <option value="">Select Frequency</option>
+                  <option value="1">Daily</option>
+                  <option value="2">Weekly</option>
+                  <option value="3">Monthly</option>
+                </select>
+
+                <button className="my-button" onClick={handleSubmit}>
+                  Submit Goal
+                </button>
+              </div>
+            ) : (
+              <p className="text-green-600">Goal submitted successfully!</p>
+            )}
+          </div>
+        )}
+
+        {/* Always show the Back button to go back to category selection */}
         <button onClick={() => setCategory("")} className="my-button">
-          Back to Categories
+          Back
         </button>
-      )}
-    </div>
+
+        {/* Optionally, after submission, show this */}
+        {submitted && (
+          <button onClick={() => setCategory("")} className="my-button">
+            Back to Categories
+          </button>
+        )}
+      </div>
     </div>
   );
 };

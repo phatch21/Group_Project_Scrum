@@ -25,6 +25,7 @@ function App() {
         <Route path="/" element={<HomePage />} />
         <Route path="/settings" element={<SettingsPage />} />
         <Route path="/customization" element={<CustomizationsPage />} />
+        <Route path="/menu" element={<Stats/>}/>
         <Route path="/stats" element={<StatsPage />} />
         <Route path="/Login" element={<LoginPage />} />
         <Route path="/Orchard" element={<OrchardPage />} />
