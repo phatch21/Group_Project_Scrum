@@ -59,7 +59,7 @@ const BottomNavigation: React.FC = () => {
             iconName="target"
             svgContent={TARGET_ICON}
             isActive={activeIcon === "target"}
-            onClick={() => navigate("/stats")}
+            onClick={() => navigate("/menu")}
             ariaLabel="Target"
             id={""}
             icon={undefined}

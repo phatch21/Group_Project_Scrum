@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 const totalGoals = 10;
 const completedGoals = 7;
@@ -11,10 +11,11 @@ const GoalsAccomplished: React.FC = () => {
       <div className="w-40 h-40 rounded-full border-8 border-green-400 flex items-center justify-center text-2xl font-bold">
         {percentage}%
       </div>
-      <p className="mt-4">{completedGoals} of {totalGoals} goals completed</p>
+      <p className="mt-4">
+        {completedGoals} of {totalGoals} goals completed
+      </p>
     </div>
   );
 };
 
 export default GoalsAccomplished;
-

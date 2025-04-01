@@ -11,7 +11,9 @@ function Stats() {
         New Goal
       </div>
       <hr />
-      <div className="menu-item">Stats</div>
+      <div className="menu-item" onClick={() => navigate("/stats")}>
+        Stats
+      </div>
     </div>
   );
 }
