@@ -28,7 +28,7 @@ namespace Scrum_Team_API.Controllers
             return Ok(GoalTypes);
         }
 
-        [HttpPost("/goals")]
+        [HttpPost("/AddGoal")]
         public IActionResult CreateGoal([FromBody] Goal goal)
         {
             if (goal == null || string.IsNullOrEmpty(goal.Gname) || goal.TypeId == 0 || goal.UserId == 0)
