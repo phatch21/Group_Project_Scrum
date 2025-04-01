@@ -61,7 +61,7 @@ const GoalInput = () => {
       TypeId: parseInt(category), // Changed from TypeId to Type
       FinDate: formattedDate,
       SuggestId: null,
-      FreqId: parseInt(frequency), // Changed from FreqId to Freq
+      Freq: parseInt(frequency), // Changed from FreqId to Freq
       GoalComp: false,
     };
 
@@ -87,6 +87,7 @@ const GoalInput = () => {
   };
 
   return (
+    <div className="p-4 max-w-md mx-auto flex flex-col items-center text-center">
     <div className="p-4 max-w-md mx-auto">
       {error ? (
         <p className="text-red-500">{error}</p>
@@ -125,15 +126,14 @@ const GoalInput = () => {
                 onChange={(e) => setName(e.target.value)}
                 className="mb-2 p-2 border rounded w-full text-black"
               />
-              <br />
-              <br />
+        
               <textarea
                 placeholder="Description"
                 value={description}
                 onChange={(e) => setDescription(e.target.value)}
                 className="mb-2 p-2 border rounded w-full text-black"
               />
-              <br />
+          
 
               <input
                 type="date"
@@ -141,7 +141,7 @@ const GoalInput = () => {
                 onChange={(e) => setFinishDate(e.target.value)}
                 className="mb-2 p-2 border rounded w-full text-black"
               />
-              <br />
+           
               <select
                 value={frequency}
                 onChange={(e) => setFrequency(e.target.value)}
@@ -152,7 +152,7 @@ const GoalInput = () => {
                 <option value="2">Weekly</option>
                 <option value="3">Monthly</option>
               </select>
-              <br />
+         
               <button className="my-button" onClick={handleSubmit}>
                 Submit Goal
               </button>
@@ -164,7 +164,7 @@ const GoalInput = () => {
       )}
 
       {/* Always show the Back button to go back to category selection */}
-      <button onClick={() => navigate("/stats")} className="my-button">
+      <button onClick={() => navigate(-1)} className="my-button">
         Back
       </button>
 
@@ -174,6 +174,7 @@ const GoalInput = () => {
           Back to Categories
         </button>
       )}
+    </div>
     </div>
   );
 };
