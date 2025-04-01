@@ -25,3 +25,4 @@ const GoalsByCategory: React.FC = () => {
 };
 
 export default GoalsByCategory;
+

@@ -26,3 +26,4 @@ const GoalsOverTime: React.FC = () => {
 };
 
 export default GoalsOverTime;
+

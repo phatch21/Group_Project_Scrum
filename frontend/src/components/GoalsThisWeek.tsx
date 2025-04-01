@@ -30,12 +30,10 @@ const GoalsThisWeek: React.FC = () => {
   );
 
   return (
-    <div className="p-6 bg-gray-900 min-h-[100vh]">
-      <h3 className="text-xl font-bold mb-4 text-white">📅 Goals This Week</h3>
-
+    <div className="p-6 bg-gray-900 min-h-[100vh] text-white">
+      <h3 className="text-xl font-bold mb-4">📅 Goals This Week</h3>
       <Calendar onChange={handleDateChange} value={selectedDate} />
-
-      <div className="mt-4 text-white">
+      <div className="mt-4">
         <h4 className="text-lg font-semibold">Goals for {selectedDate.toDateString()}</h4>
         {goalsForDate.length > 0 ? (
           <ul className="list-disc list-inside">
@@ -52,5 +50,6 @@ const GoalsThisWeek: React.FC = () => {
 };
 
 export default GoalsThisWeek;
+
 
 

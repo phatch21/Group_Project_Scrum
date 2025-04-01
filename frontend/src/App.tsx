@@ -5,7 +5,7 @@ import OrchardPage from "./pages/OrchardPage";
 import CustomizationsPage from "./pages/CustomizationsPage";
 import StatsPage from "./pages/StatsPage";
 import GoalsInputPage from "./pages/GoalsInputPage";
-import CreateAccountPage from "./pages/CreateAccountPage";
+// import CreateAccountPage from "./pages/CreateAccountPage";
 import { useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import HomeScreen from "./HomeScreen";
@@ -16,7 +16,7 @@ import Stats from "./stats";
 import Customization from "./Customization";
 import Login from "./Login";
 import CreateAccount from "../src/pages/CreateAccount";
-import GoalInput from "./GoalInput";
+import GoalInput from "./components/GoalInput";
 
 function App() {
   return (
@@ -28,7 +28,7 @@ function App() {
         <Route path="/stats" element={<StatsPage />} />
         <Route path="/Login" element={<LoginPage />} />
         <Route path="/Orchard" element={<OrchardPage />} />
-        <Route path="/CreateAccount" element={<CreateAccountPage />} />
+        {/* <Route path="/CreateAccount" element={<CreateAccountPage />} /> */}
         <Route path="/GoalInput" element={<GoalsInputPage />} />
       </Routes>
     </div>
