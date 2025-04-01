@@ -28,7 +28,7 @@ namespace Scrum_Team_API.Controllers
             return Ok(GoalTypes);
         }
 
-        [HttpPost("/goals")]
+        [HttpPost("/AddGoal")]
         public IActionResult CreateGoal([FromBody] Goal goal)
         {
             if (goal == null || string.IsNullOrEmpty(goal.Gname) || goal.TypeId == 0 || goal.UserId == 0)
@@ -40,6 +40,14 @@ namespace Scrum_Team_API.Controllers
             _context.SaveChanges();
 
             return CreatedAtAction(nameof(GetGoalTypes), new { id = goal.GoalId }, goal);
+        }
+
+        [HttpPost("CreateAccount")]
+        public IActionResult CreateAccount([FromBody] User account)
+        {
+            _context.Users.Add(account);
+            _context.SaveChanges();
+            return Ok(account);
         }
     }
 }

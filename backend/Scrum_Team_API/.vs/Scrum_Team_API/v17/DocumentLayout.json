@@ -3,16 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\tessa\\source\\repos\\Group_Project_Scrum\\backend\\Scrum_Team_API\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{B65BFC48-9CD3-48DC-B08E-DD750CBD05DF}|Scrum_Team_API\\Scrum_Team_API.csproj|c:\\users\\tessa\\source\\repos\\group_project_scrum\\backend\\scrum_team_api\\scrum_team_api\\controllers\\goalscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B65BFC48-9CD3-48DC-B08E-DD750CBD05DF}|Scrum_Team_API\\Scrum_Team_API.csproj|solutionrelative:scrum_team_api\\controllers\\goalscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{B65BFC48-9CD3-48DC-B08E-DD750CBD05DF}|Scrum_Team_API\\Scrum_Team_API.csproj|c:\\users\\tessa\\source\\repos\\group_project_scrum\\backend\\scrum_team_api\\scrum_team_api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B65BFC48-9CD3-48DC-B08E-DD750CBD05DF}|Scrum_Team_API\\Scrum_Team_API.csproj|solutionrelative:scrum_team_api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B65BFC48-9CD3-48DC-B08E-DD750CBD05DF}|Scrum_Team_API\\Scrum_Team_API.csproj|c:\\users\\tessa\\source\\repos\\group_project_scrum\\backend\\scrum_team_api\\scrum_team_api\\models\\apricottreedbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B65BFC48-9CD3-48DC-B08E-DD750CBD05DF}|Scrum_Team_API\\Scrum_Team_API.csproj|solutionrelative:scrum_team_api\\models\\apricottreedbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B65BFC48-9CD3-48DC-B08E-DD750CBD05DF}|Scrum_Team_API\\Scrum_Team_API.csproj|c:\\users\\tessa\\source\\repos\\group_project_scrum\\backend\\scrum_team_api\\scrum_team_api\\controllers\\goalscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B65BFC48-9CD3-48DC-B08E-DD750CBD05DF}|Scrum_Team_API\\Scrum_Team_API.csproj|solutionrelative:scrum_team_api\\controllers\\goalscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B65BFC48-9CD3-48DC-B08E-DD750CBD05DF}|Scrum_Team_API\\Scrum_Team_API.csproj|c:\\users\\tessa\\source\\repos\\group_project_scrum\\backend\\scrum_team_api\\scrum_team_api\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
@@ -46,7 +46,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 412,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Bookmark",
@@ -75,20 +75,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\tessa\\source\\repos\\Group_Project_Scrum\\backend\\Scrum_Team_API\\Scrum_Team_API\\Program.cs",
               "RelativeDocumentMoniker": "Scrum_Team_API\\Program.cs",
               "ToolTip": "C:\\Users\\tessa\\source\\repos\\Group_Project_Scrum\\backend\\Scrum_Team_API\\Scrum_Team_API\\Program.cs",
               "RelativeToolTip": "Scrum_Team_API\\Program.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAABcAAAAXAAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-25T05:21:57.449Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "ApricotTreeDbContext.cs",
               "DocumentMoniker": "C:\\Users\\tessa\\source\\repos\\Group_Project_Scrum\\backend\\Scrum_Team_API\\Scrum_Team_API\\Models\\ApricotTreeDbContext.cs",
               "RelativeDocumentMoniker": "Scrum_Team_API\\Models\\ApricotTreeDbContext.cs",
@@ -101,13 +101,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "GoalsController.cs",
               "DocumentMoniker": "C:\\Users\\tessa\\source\\repos\\Group_Project_Scrum\\backend\\Scrum_Team_API\\Scrum_Team_API\\Controllers\\GoalsController.cs",
               "RelativeDocumentMoniker": "Scrum_Team_API\\Controllers\\GoalsController.cs",
               "ToolTip": "C:\\Users\\tessa\\source\\repos\\Group_Project_Scrum\\backend\\Scrum_Team_API\\Scrum_Team_API\\Controllers\\GoalsController.cs",
               "RelativeToolTip": "Scrum_Team_API\\Controllers\\GoalsController.cs",
-              "ViewState": "AgIAABMAAAAAAAAAAAAQwC0AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAxwBwAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-31T14:55:34.556Z",
               "EditorCaption": ""

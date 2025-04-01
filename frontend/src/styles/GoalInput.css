@@ -1,0 +1,52 @@
+.my-button {
+  background-color: #2c2f6f !important;
+  color: white !important;
+  display: block;
+  border: 1px solid #000;
+  border-radius: 20px;
+  width: 157px;
+  max-width: 100%;
+  margin-top: 24px;
+  padding: 13px 20px;
+  font-family:
+    Inter,
+    -apple-system,
+    Roboto,
+    Helvetica,
+    sans-serif;
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 1;
+}
+.sendMessage {
+  color: #fff;
+  text-align: center;
+  background-color: #2c2f6f;
+  border: 1px solid #000;
+  border-radius: 20px;
+  width: 157px;
+  max-width: 100%;
+  margin-top: 24px;
+  padding: 13px 20px;
+  font-family:
+    Inter,
+    -apple-system,
+    Roboto,
+    Helvetica,
+    sans-serif;
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 1;
+}
+
+input,
+textarea,
+select {
+  display: block;
+  width: 100%;
+  max-width: 300px;
+  margin: 10px auto;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}

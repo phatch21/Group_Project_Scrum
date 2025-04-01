@@ -17,13 +17,13 @@ public partial class User
 
     public string? ProfilePic { get; set; }
 
-    public virtual ICollection<Friend> FriendUserId1Navigations { get; set; } = new List<Friend>();
+    public virtual ICollection<Friend>? FriendUserId1Navigations { get; set; } = new List<Friend>();
 
-    public virtual ICollection<Friend> FriendUserId2Navigations { get; set; } = new List<Friend>();
+    public virtual ICollection<Friend>? FriendUserId2Navigations { get; set; } = new List<Friend>();
 
-    public virtual ICollection<Goal> Goals { get; set; } = new List<Goal>();
+    public virtual ICollection<Goal>? Goals { get; set; } = new List<Goal>();
 
-    public virtual ICollection<GraphUser> GraphUsers { get; set; } = new List<GraphUser>();
+    public virtual ICollection<GraphUser>? GraphUsers { get; set; } = new List<GraphUser>();
 
-    public virtual ICollection<Journal> Journals { get; set; } = new List<Journal>();
+    public virtual ICollection<Journal>? Journals { get; set; } = new List<Journal>();
 }

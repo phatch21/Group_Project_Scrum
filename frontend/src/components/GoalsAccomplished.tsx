@@ -17,3 +17,4 @@ const GoalsAccomplished: React.FC = () => {
 };
 
 export default GoalsAccomplished;
+
