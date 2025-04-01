@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import "../styles/GoalInput.css";
 
 const GoalInput = () => {
   const [category, setCategory] = useState("");
@@ -12,6 +13,7 @@ const GoalInput = () => {
     { typeId: number; typeName: string }[]
   >([]);
   const [error, setError] = useState("");
+  const navigate = useNavigate();
 
   useEffect(() => {
     const fetchCategories = async () => {
@@ -47,33 +49,45 @@ const GoalInput = () => {
   const handleSubmit = async () => {
     if (!name || !description || !category || !frequency) return;
 
+    const formattedDate = finishDate
+      ? new Date(finishDate).toISOString()
+      : null;
+    console.log("Formatted Date:", formattedDate);
+
+    const payload = {
+      UserId: 1, // Remove this if the backend auto-generates it
+      gname: name,
+      Gdescription: description,
+      TypeId: parseInt(category), // Changed from TypeId to Type
+      FinDate: formattedDate,
+      SuggestId: null,
+      Freq: parseInt(frequency), // Changed from FreqId to Freq
+      GoalComp: false,
+    };
+
+    console.log("Submitting payload:", payload);
+
     try {
-      const response = await fetch("https://localhost:7182/goals", {
+      const response = await fetch("https://localhost:7182/AddGoal", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          name,
-          description,
-          typeID: parseInt(category), // Convert to integer
-          finishDate: finishDate || null,
-          frequencyID: parseInt(frequency),
-          goalcomp: false,
-        }),
+        body: JSON.stringify(payload),
       });
 
       if (response.ok) {
         setSubmitted(true);
       } else {
         console.error("Failed to submit goal");
+        const errorResponse = await response.text();
+        console.error("Server Response:", errorResponse);
       }
     } catch (error) {
       console.error("Error submitting goal:", error);
     }
   };
 
-
-
   return (
+    <div className="p-4 max-w-md mx-auto flex flex-col items-center text-center">
     <div className="p-4 max-w-md mx-auto">
       {error ? (
         <p className="text-red-500">{error}</p>
@@ -84,7 +98,7 @@ const GoalInput = () => {
             categories.map((cat) => (
               <button
                 key={cat.typeId}
-                className="mt-2 p-2 bg-white text-black border border-gray-500 rounded w-full"
+                className="my-button"
                 onClick={() => handleCategorySelect(cat.typeName)}
               >
                 {cat.typeName}
@@ -112,15 +126,14 @@ const GoalInput = () => {
                 onChange={(e) => setName(e.target.value)}
                 className="mb-2 p-2 border rounded w-full text-black"
               />
-              <br />
-              <br />
+        
               <textarea
                 placeholder="Description"
                 value={description}
                 onChange={(e) => setDescription(e.target.value)}
                 className="mb-2 p-2 border rounded w-full text-black"
               />
-              <br />
+          
 
               <input
                 type="date"
@@ -128,7 +141,7 @@ const GoalInput = () => {
                 onChange={(e) => setFinishDate(e.target.value)}
                 className="mb-2 p-2 border rounded w-full text-black"
               />
-              <br />
+           
               <select
                 value={frequency}
                 onChange={(e) => setFrequency(e.target.value)}
@@ -139,11 +152,8 @@ const GoalInput = () => {
                 <option value="2">Weekly</option>
                 <option value="3">Monthly</option>
               </select>
-              <br />
-              <button
-                className="mt-2 p-2 bg-blue-500 text-white rounded w-full"
-                onClick={handleSubmit}
-              >
+         
+              <button className="my-button" onClick={handleSubmit}>
                 Submit Goal
               </button>
             </div>
@@ -154,22 +164,17 @@ const GoalInput = () => {
       )}
 
       {/* Always show the Back button to go back to category selection */}
-      <button
-        onClick={() => setCategory("")}
-        className="mt-4 p-2 bg-white text-black border border-gray-500 rounded w-full"
-      >
-        Back to Categories
+      <button onClick={() => navigate(-1)} className="my-button">
+        Back
       </button>
 
       {/* Optionally, after submission, show this */}
       {submitted && (
-        <button
-          onClick={() => setCategory("")}
-          className="mt-4 p-2 bg-white text-black border border-gray-500 rounded w-full"
-        >
+        <button onClick={() => setCategory("")} className="my-button">
           Back to Categories
         </button>
       )}
+    </div>
     </div>
   );
 };
