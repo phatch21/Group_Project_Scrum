@@ -1,9 +1,11 @@
 {
   "dependencies": {
     "react-calendar": "^5.1.0",
+    "react-router-dom": "^7.4.0",
     "recharts": "^2.15.1"
   },
   "devDependencies": {
+    "@types/react-router-dom": "^5.3.3",
     "@types/recharts": "^1.8.29"
   }
 }

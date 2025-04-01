@@ -1,4 +1,4 @@
-import CreateAccount from "./CreateAccount";
+import CreateAccount from "../CreateAccount";
 
 function CreateAccountPage() {
   return (

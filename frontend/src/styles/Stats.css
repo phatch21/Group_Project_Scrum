@@ -1,0 +1,92 @@
+/* This wrapper centers the container vertically and horizontally */
+.stats-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* full viewport height */
+    background-color: #f0f0f0;
+    padding: 1rem; /* in case the viewport is narrow */
+  }
+  
+  /* Phone-like container for your stats page */
+  .stats-container {
+    width: 100%;
+    max-width: 375px;
+    border: 1px solid #ddd;
+    border-radius: 16px;
+    background-color: #fff;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+  }
+  
+  /* Sticky header at the top */
+  .stats-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+  }
+  
+  .stats-header h2 {
+    margin: 0;
+    font-size: 1.25rem;
+    font-weight: bold;
+  }
+  
+  /* The area that holds the 4 stat buttons */
+  .stats-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+  }
+  
+  /* Each button for a stats section */
+  .stat-button {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 12px;
+    padding: 0.75rem 1rem;
+    cursor: pointer;
+    transition: box-shadow 0.3s;
+  }
+  
+  .stat-button:hover {
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  }
+  
+  .stat-button img {
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
+  }
+  
+  .stat-button-label {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #000;
+  }
+  
+  /* Each stat section */
+  .stat-section {
+    padding: 0.75rem;
+    margin: 0.75rem;
+    border-radius: 12px;
+    border: 1px solid #ccc;
+    background-color: #f8f8f8;
+  }
+  
+  .stat-section h3 {
+    margin-top: 0;
+  }
+  
+  
+  
