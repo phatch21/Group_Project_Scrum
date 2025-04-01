@@ -1,5 +1,5 @@
 import BottomNavigation from "../BottomNavigation";
-import GoalInput from "../GoalInput";
+import GoalInput from "../components/GoalInput";
 
 function GoalsInputPage() {
   return (
