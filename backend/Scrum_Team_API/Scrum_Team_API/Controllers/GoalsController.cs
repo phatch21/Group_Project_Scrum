@@ -41,5 +41,13 @@ namespace Scrum_Team_API.Controllers
 
             return CreatedAtAction(nameof(GetGoalTypes), new { id = goal.GoalId }, goal);
         }
+
+        [HttpPost("CreateAccount")]
+        public IActionResult CreateAccount([FromBody] User account)
+        {
+            _context.Users.Add(account);
+            _context.SaveChanges();
+            return Ok(account);
+        }
     }
 }
