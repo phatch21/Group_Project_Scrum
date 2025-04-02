@@ -6,18 +6,18 @@ function Stats() {
   const navigate = useNavigate();
   return (
     <>
-      <div className="container">
-        <div className="menu-item">Current Goals</div>
-        <hr />
-        <div className="menu-item" onClick={() => navigate("/GoalInput")}>
-          New Goal
-        </div>
-        <hr />
-        <div className="menu-item" onClick={() => navigate("/stats")}>
-          Stats
-        </div>
+    <div className="container">
+      <div className="menu-item">Current Goals</div>
+      <hr />
+      <div className="menu-item" onClick={() => navigate("/GoalInput")}>
+        New Goal
       </div>
-      <BottomNavigation />
+      <hr />
+      <div className="menu-item" onClick={() => navigate("/stats")}>
+        Stats
+      </div>
+    </div>
+    <BottomNavigation/>
     </>
   );
 }
