@@ -29,18 +29,27 @@ namespace Scrum_Team_API.Controllers
         }
 
         [HttpPost("/AddGoal")]
-        public IActionResult CreateGoal([FromBody] Goal goal)
+        public IActionResult CreateGoal([FromBody] GoalDto dto)
         {
-            if (goal == null || string.IsNullOrEmpty(goal.Gname) || goal.TypeId == 0 || goal.UserId == 0)
+            var goal = new Goal
             {
-                return BadRequest("Invalid goal data.");
-            }
+                GoalId = dto.GoalId,
+                UserId = dto.UserId,
+                Gname = dto.Gname,
+                Gdescription = dto.Gdescription,
+                TypeId = dto.TypeId,
+                FinDate = dto.FinDate,
+                SuggestId = dto.SuggestId,
+                FreqId = dto.FreqId,
+                GoalComp = dto.GoalComp
+            };
 
             _context.Goals.Add(goal);
             _context.SaveChanges();
 
             return CreatedAtAction(nameof(GetGoalTypes), new { id = goal.GoalId }, goal);
         }
+
 
         [HttpPost("CreateAccount")]
         public IActionResult CreateAccount([FromBody] CreateUserDto dto)

@@ -47,44 +47,60 @@ const GoalInput = () => {
   };
 
   const handleSubmit = async () => {
-    if (!name || !description || !category || !frequency) return;
-
+    if (!name || !description || !category || !frequency) {
+      setError("Please fill out all required fields.");
+      return;
+    }
+  
+    const userId = 1; // ⚠️ Make sure this user exists in your Users table
+    const typeId = parseInt(category);
+    const freqId = parseInt(frequency);
+  
+    if (userId <= 0 || typeId <= 0 || freqId <= 0) {
+      setError("Invalid user, category, or frequency selection.");
+      return;
+    }
+  
     const formattedDate = finishDate
       ? new Date(finishDate).toISOString()
       : null;
-    console.log("Formatted Date:", formattedDate);
-
+  
     const payload = {
-      userId: 1,
-      gName: name, // Correct field name
-      gDescription: description, // Correct field name
-      typeId: parseInt(category), // Ensure category is an integer
-      finDate: formattedDate, // Ensure correct date format
-      suggestId: null, // This is optional based on your schema
-      freqId: parseInt(frequency), // Ensure frequency matches FreqID
-      goalComp: false, // Assuming this column exists
+      goalId: 0,
+      userId,
+      gname: name,
+      gdescription: description,
+      typeId,
+      finDate: formattedDate,
+      suggestId: null,
+      freqId,
+      goalComp: false,
     };
-
+  
     console.log("Submitting payload:", payload);
-
+  
     try {
       const response = await fetch("https://localhost:7182/AddGoal", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(payload),
       });
-
+  
       if (response.ok) {
         setSubmitted(true);
+        setError(""); // clear any previous error
       } else {
-        console.error("Failed to submit goal");
         const errorResponse = await response.text();
         console.error("Server Response:", errorResponse);
+        setError("Server rejected the goal. Check values and try again.");
       }
     } catch (error) {
       console.error("Error submitting goal:", error);
+      setError("Something went wrong while submitting your goal.");
     }
   };
+  
+
 
   return (
     <div className="p-4 max-w-md mx-auto flex flex-col items-center text-center">

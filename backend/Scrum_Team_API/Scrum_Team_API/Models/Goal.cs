@@ -23,11 +23,12 @@ public partial class Goal
 
     public bool? GoalComp { get; set; }
 
-    public virtual Frequency Freq { get; set; } = null!;
-
+    public virtual Frequency? Freq { get; set; }
+    
     public virtual AiIdea? Suggest { get; set; }
+    
+    public virtual GoalType? Type { get; set; }
+    
+    public virtual User? User { get; set; }
 
-    public virtual GoalType Type { get; set; } = null!;
-
-    public virtual User User { get; set; } = null!;
 }
