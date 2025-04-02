@@ -5,7 +5,6 @@ interface NavButtonProps {
   iconName: string;
   svgContent: string;
   id: string;
-  icon: React.ReactNode;
   isActive: boolean;
   onClick: () => void;
   ariaLabel: string;
@@ -13,7 +12,7 @@ interface NavButtonProps {
 
 const NavButton: React.FC<NavButtonProps> = ({
   id,
-  icon,
+  svgContent,
   isActive,
   onClick,
   ariaLabel,
@@ -26,7 +25,10 @@ const NavButton: React.FC<NavButtonProps> = ({
       aria-label={ariaLabel}
       aria-pressed={isActive}
     >
-      <div className={styles.iconContainer}>{icon}</div>
+      <div
+        className={styles.iconContainer}
+        dangerouslySetInnerHTML={{ __html: svgContent }}
+      />
     </button>
   );
 };
