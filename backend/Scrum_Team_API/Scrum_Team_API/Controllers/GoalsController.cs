@@ -43,11 +43,27 @@ namespace Scrum_Team_API.Controllers
         }
 
         [HttpPost("CreateAccount")]
-        public IActionResult CreateAccount([FromBody] User account)
+        public IActionResult CreateAccount([FromBody] CreateUserDto dto)
         {
-            _context.Users.Add(account);
+            if (!ModelState.IsValid)
+            {
+                return BadRequest("Invalid user data.");
+            }
+
+            var newUser = new User
+            {
+                FirstName = dto.FirstName,
+                LastName = dto.LastName,
+                Email = dto.Email,
+                Password = dto.Password,
+                ProfilePic = dto.ProfilePic
+            };
+
+            _context.Users.Add(newUser);
             _context.SaveChanges();
-            return Ok(account);
+
+            return Ok(newUser);
         }
+
     }
 }

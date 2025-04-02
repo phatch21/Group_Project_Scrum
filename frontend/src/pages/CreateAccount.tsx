@@ -4,12 +4,11 @@ import { User } from "../types/User";
 
 function CreateAccount() {
   const [formData, setFormData] = useState({
-    userID: 0,
     firstName: "",
     lastName: "",
     email: "",
     password: "",
-    profilePic: "string",
+    profilePic: ""
   });
   const [error, setError] = useState<string | null>(null);
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -21,7 +20,7 @@ function CreateAccount() {
     try {
       const addUser = async function (newUser: User): Promise<User> {
         const response = await fetch(
-          "http://localhost:7182/Goals/CreateAccount",
+          "https://localhost:7182/Goals/CreateAccount",
           {
             method: "POST",
             headers: { "Content-Type": "application/json" },

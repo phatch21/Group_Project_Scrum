@@ -206,9 +206,10 @@ public partial class ApricotTreeDbContext : DbContext
             entity.HasIndex(e => e.Email, "IX_USERS_Email").IsUnique();
 
             entity.Property(e => e.UserId)
-                .ValueGeneratedNever()
+                .ValueGeneratedOnAdd()
                 .HasColumnName("UserID");
         });
+
 
         OnModelCreatingPartial(modelBuilder);
     }
