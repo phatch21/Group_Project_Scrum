@@ -162,17 +162,13 @@ const GoalInput = () => {
           </div>
         )}
 
-        {/* Always show the Back button to go back to category selection */}
-        <button onClick={() => setCategory("")} className="my-button">
-          Back
-        </button>
+        {/* Show the Back button only after a category is selected */}
+{category && (
+  <button onClick={() => setCategory("")} className="my-button mt-4">
+    Back
+  </button>
+)}
 
-        {/* Optionally, after submission, show this */}
-        {submitted && (
-          <button onClick={() => setCategory("")} className="my-button">
-            Back to Categories
-          </button>
-        )}
       </div>
     </div>
   );
