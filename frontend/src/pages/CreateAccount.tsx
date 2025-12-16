@@ -4,11 +4,12 @@ import { User } from "../types/User";
 
 function CreateAccount() {
   const [formData, setFormData] = useState({
+    userID: 0, // Add userID for type compatibility
     firstName: "",
     lastName: "",
     email: "",
     password: "",
-    profilePic: ""
+    profilePic: "",
   });
   const [error, setError] = useState<string | null>(null);
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -100,4 +101,3 @@ function CreateAccount() {
   );
 }
 export default CreateAccount;
-
